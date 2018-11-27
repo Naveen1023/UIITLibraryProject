@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="744.0" style="-fx-background-color: #d3d3d3;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.seeallborrowers1">
+   <children>
+      <TableView fx:id="borrowerTable" layoutX="8.0" layoutY="110.0" prefHeight="433.0" prefWidth="728.0">
+        <columns>
+          <TableColumn fx:id="bookidinborrowertable" prefWidth="117.0" text="Borrower No." />
+          <TableColumn fx:id="accidinborrowertable" prefWidth="123.0" text="Accession No." />
+            <TableColumn fx:id="borrowernameinborrowertable" prefWidth="216.0" text="Borrower's Name" />
+            <TableColumn fx:id="rollnoinborrowertable" prefWidth="103.0" text="Class Roll No." />
+            <TableColumn fx:id="doiinborrowertable" prefWidth="168.0" text="Date Of Issue" />
+        </columns>
+      </TableView>
+      <Label layoutX="227.0" prefHeight="41.0" prefWidth="208.0" text="Details Of Borrowers" textFill="#278794">
+         <font>
+            <Font name="Arial Narrow Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="523.0" layoutY="67.0" onAction="#seeAllBorrowers" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: #278794;" text="SHOW ALL BORROWERS" textFill="WHITE">
+         <font>
+            <Font name="Arial Narrow Bold" size="15.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="specifiedBorrower" labelFloat="true" layoutX="14.0" layoutY="67.0" maxWidth="263.0" minWidth="187.0" onKeyPressed="#pressingEnterInSeeBorrowersSection" prefHeight="31.0" prefWidth="263.0" promptText="Enter Borrower No." style="-fx-background-color: white;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="285.0" layoutY="70.0" onAction="#seeSpecifiedBorrower" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: #278794;" text="SHOW " textFill="WHITE">
+         <font>
+            <Font name="Arial Narrow Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

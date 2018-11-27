@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="540.0" fitWidth="710.0">
+         <image>
+            <Image url="@../resources/Shubham_nhi_raha_ab.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="22.0" layoutY="390.0" prefHeight="60.0" prefWidth="666.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>

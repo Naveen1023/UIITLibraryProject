@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="508.0" style="-fx-background-color: #999999;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.lostController">
+   <children>
+      <Label layoutX="25.0" layoutY="45.0" prefHeight="17.0" prefWidth="112.0" text="Accession No.">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="90.0" prefHeight="17.0" prefWidth="112.0" text="Book_Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="134.0" prefHeight="17.0" prefWidth="112.0" text="Author">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="acno" layoutX="159.0" layoutY="40.0" maxWidth="245.0" minWidth="182.0" prefHeight="31.0" prefWidth="245.0" />
+      <JFXTextField fx:id="bookName" layoutX="159.0" layoutY="85.0" maxWidth="245.0" minWidth="182.0" prefHeight="31.0" prefWidth="245.0" />
+      <JFXTextField fx:id="author" layoutX="159.0" layoutY="129.0" maxWidth="245.0" minWidth="182.0" prefHeight="31.0" prefWidth="245.0" />
+      <Label fx:id="addToLost" layoutX="158.0" layoutY="253.0" prefHeight="17.0" prefWidth="121.0" text="Added to Lost Books" textFill="#247c1e">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="131.0" layoutY="204.0" onAction="#confirmLost" prefHeight="38.0" prefWidth="175.0" style="-fx-background-color: #3399cc;" text="Confirm it's lost" textFill="#fff2f2">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

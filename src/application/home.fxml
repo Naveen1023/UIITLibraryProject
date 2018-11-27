@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="1100.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <AnchorPane layoutY="-3.0" prefHeight="34.0" prefWidth="1100.0" style="-fx-background-color: #41414A;">
+         <children>
+            <Label fx:id="title" alignment="CENTER" layoutX="2.0" onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="39.0" prefWidth="967.0" text="  Library Management System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font></Label>
+            <Separator layoutX="1044.0" layoutY="3.0" orientation="VERTICAL" prefHeight="39.0" prefWidth="7.0" style="-fx-background-color: #fffff;" />
+            <JFXButton buttonType="RAISED" layoutX="1003.0" layoutY="2.0" onAction="#minimizeButton" prefHeight="42.0" prefWidth="45.0" style="-fx-background-color: #ffffff;" text="_" textFill="#220000">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="1051.0" layoutY="3.0" onAction="#closeButton" prefHeight="42.0" prefWidth="45.0" style="-fx-background-color: red;" text="X" textFill="#f5f5f5">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></JFXButton>
+         </children></AnchorPane>
+      <AnchorPane layoutY="139.0" prefHeight="554.0" prefWidth="1100.0">
+         <children>
+            <JFXTabPane layoutX="144.0" layoutY="75.0" prefHeight="554.0" prefWidth="1100.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Search Your Book Here">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="src" focusColor="WHITE" labelFloat="true" layoutX="17.0" layoutY="20.0" maxWidth="386.0" minWidth="386.0" onKeyPressed="#pressingKeyInTheSearchSection" prefHeight="37.0" prefWidth="386.0" promptText="Enter Book Name Here" style="-fx-background-color: #f0f0f0;" unFocusColor="#1d00ff">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton layoutX="437.0" layoutY="45.0" onAction="#searchFunction" prefHeight="36.0" prefWidth="158.0" style="-fx-background-color: #36a8ff;" text="Search Now" textFill="#f5f5f5" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </JFXButton>
+                              <TableView fx:id="table" layoutX="10.0" layoutY="130.0" prefHeight="360.0" prefWidth="1085.0">
+                                <columns>
+                                  <TableColumn fx:id="acrno4" prefWidth="185.0" text="Accession Number" />
+                                  <TableColumn fx:id="bookname3" prefWidth="436.0" text="Book Name" />
+                                    <TableColumn fx:id="author2" prefWidth="333.0" text="Author" />
+                                    <TableColumn fx:id="avail" prefWidth="130.0" text="Availability" />
+                                </columns>
+                              </TableView>
+                              <JFXButton layoutX="613.0" layoutY="45.0" onAction="#resetInSearch" prefHeight="11.0" prefWidth="164.0" style="-fx-background-color: #36a8ff;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXTextField fx:id="authorNameSearch" focusColor="WHITE" labelFloat="true" layoutX="17.0" layoutY="79.0" maxWidth="387.0" minWidth="387.0" onKeyPressed="#pressingKeyInTheSearchSection" prefHeight="37.0" prefWidth="387.0" promptText="Enter Author Name Here" style="-fx-background-color: #f0f0f0;" unFocusColor="#1d00ff">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton layoutX="889.0" layoutY="45.0" onAction="#showallBooks" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: Green;" text="List Of All Books" textFill="WHITE">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font></JFXButton>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Issue a Book ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="brno" focusColor="WHITE" labelFloat="true" layoutX="352.0" layoutY="46.0" prefHeight="34.0" prefWidth="397.0" promptText="Enter Borrower No. Here" style="-fx-background-color: #ffffff;" unFocusColor="#1a00ff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="acrno" focusColor="WHITE" labelFloat="true" layoutX="351.0" layoutY="110.0" prefHeight="34.0" prefWidth="398.0" promptText="Enter Accession No. Here" style="-fx-background-color: #ffffff;" unFocusColor="#1a00ff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="brname" focusColor="WHITE" labelFloat="true" layoutX="352.0" layoutY="180.0" prefHeight="34.0" prefWidth="398.0" promptText="Enter Borrower Name Here" style="-fx-background-color: #ffffff;" unFocusColor="#1a00ff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="roll" focusColor="WHITE" labelFloat="true" layoutX="351.0" layoutY="247.0" prefHeight="34.0" prefWidth="398.0" promptText="Enter Borrower's Class Roll Number" style="-fx-background-color: #ffffff;" unFocusColor="#1a00ff">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXButton buttonType="RAISED" layoutX="350.0" layoutY="390.0" onAction="#confirmissue" prefHeight="34.0" prefWidth="172.0" style="-fx-background-color: #36a8ff;" text="Confirm Issue " textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label fx:id="issued" layoutX="424.0" layoutY="457.0" prefHeight="21.0" prefWidth="385.0" text="Issued Successfully" textFill="#02ff1c">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton buttonType="RAISED" layoutX="578.0" layoutY="390.0" onAction="#resetInIssue" prefHeight="35.0" prefWidth="172.0" style="-fx-background-color: #36a8ff;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="21.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXDatePicker fx:id="doi" defaultColor="#030000" layoutX="353.0" layoutY="309.0" prefHeight="39.0" prefWidth="396.0" promptText="Date of Issue" style="-fx-background-color: white;" />
+                              <Label fx:id="printerr" layoutX="436.0" layoutY="457.0" prefHeight="25.0" prefWidth="197.0" text="Book Not Available" textFill="#fc0707">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <Label layoutX="28.0" layoutY="65.0" prefHeight="24.0" prefWidth="277.0" text="Enter complete information about the borrower" textFill="#eeeeee" />
+                              <Label layoutX="28.0" layoutY="84.0" prefHeight="17.0" prefWidth="256.0" text="in the given textfields. All information must be " textFill="WHITE" />
+                              <Label layoutX="28.0" layoutY="98.0" prefHeight="17.0" prefWidth="107.0" text="accurate." textFill="WHITE" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Return A Book">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTextField fx:id="acrno2" focusColor="WHITE" labelFloat="true" layoutX="15.0" layoutY="123.0" prefHeight="35.0" prefWidth="425.0" promptText="Enter Accession No." style="-fx-background-color: #f0f0f0;" unFocusColor="#1d00ff">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></JFXTextField>
+                              <JFXTextField fx:id="brno2" focusColor="WHITE" labelFloat="true" layoutX="15.0" layoutY="65.0" prefHeight="35.0" prefWidth="425.0" promptText="Enter Borrower No." style="-fx-background-color: #f0f0f0;" unFocusColor="#1d00ff">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></JFXTextField>
+                              <JFXButton buttonType="RAISED" layoutX="251.0" layoutY="187.0" onAction="#confirmReturn" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: #36a8ff;" text="Confirm Return " textFill="#f5f5f5">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="17.0" />
+                                 </font></JFXButton>
+                              <Label fx:id="returned" layoutX="274.0" layoutY="237.0" prefHeight="15.0" prefWidth="211.0" text="Book Returned Successfully." textFill="#1eeb17">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton buttonType="RAISED" layoutX="763.0" layoutY="394.0" onAction="#addingbooks" prefHeight="28.0" prefWidth="151.0" style="-fx-background-color: #36a8ff;" text="Add New Books" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></JFXButton>
+                              <Label layoutX="649.0" layoutY="82.0" prefHeight="17.0" prefWidth="88.0" text="Borrower No." textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="646.0" layoutY="123.0" text="Book Name" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="646.0" layoutY="165.0" text="Acc. No." textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="647.0" layoutY="209.0" text="Borrower name" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="647.0" layoutY="252.0" text="Date of Issue" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="brno3" layoutX="755.0" layoutY="75.0" maxWidth="267.0" minWidth="267.0" prefHeight="31.0" prefWidth="267.0" style="-fx-background-color: #ffffff;" unFocusColor="#ffffff00" />
+                              <JFXTextField fx:id="bookname2" layoutX="755.0" layoutY="116.0" maxWidth="267.0" minWidth="267.0" prefHeight="31.0" prefWidth="267.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" />
+                              <JFXTextField fx:id="acrno3" layoutX="755.0" layoutY="158.0" maxWidth="267.0" minWidth="267.0" prefHeight="31.0" prefWidth="267.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" />
+                              <JFXTextField fx:id="brname2" layoutX="755.0" layoutY="202.0" maxWidth="267.0" minWidth="267.0" prefHeight="31.0" prefWidth="267.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" />
+                              <JFXTextField fx:id="dateofissue" layoutX="755.0" layoutY="245.0" maxWidth="268.0" minWidth="267.0" prefHeight="31.0" prefWidth="267.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" />
+                              <JFXButton buttonType="RAISED" layoutX="930.0" layoutY="441.0" onAction="#aboutUs" prefHeight="31.0" prefWidth="143.0" ripplerFill="#5e1313" style="-fx-background-color: #99ff00;" text="About Us">
+                                 <font>
+                                    <Font name="System Bold Italic" size="15.0" />
+                                 </font></JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="590.0" layoutY="394.0" onAction="#seeBorrowers" prefHeight="28.0" prefWidth="160.0" style="-fx-background-color: #36a8ff;" text="See All The Borrowers" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="187.0" onAction="#letsGo" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: #36a8ff;" text="Check" textFill="WHITE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="122.0" layoutY="252.0" onAction="#resetInConfirm" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: #36a8ff;" text="Reset" textFill="WHITESMOKE">
+                                 <font>
+                                    <Font name="Ebrima Bold" size="17.0" />
+                                 </font>
+                              </JFXButton>
+                              <Label layoutX="647.0" layoutY="296.0" text="Total Fine" textFill="WHITE">
+                                 <font>
+                                    <Font name="Calibri Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="fine" layoutX="755.0" layoutY="289.0" maxWidth="268.0" minWidth="267.0" prefHeight="31.0" prefWidth="267.0" style="-fx-background-color: #ffffff;" unFocusColor="#4d4d4d00" />
+                              <JFXButton layoutX="927.0" layoutY="394.0" onAction="#report" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: #36a8ff;" text="Generate Reports" textFill="WHITE">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></JFXButton>
+                              <Label layoutX="649.0" layoutY="16.0" prefHeight="39.0" prefWidth="300.0" text="Information about the borrower is shown below :" textFill="#39dba8">
+                                 <font>
+                                    <Font name="Candara" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="8.0" layoutY="470.0" prefHeight="21.0" prefWidth="712.0" text="For any issues or queries cantact us. You can Call on our numbers, or email us at Cosmospeople202340@gmail.com" textFill="WHITE" />
+                              <JFXButton buttonType="RAISED" layoutX="759.0" layoutY="442.0" onAction="#addToLostBooks" prefHeight="28.0" prefWidth="160.0" style="-fx-background-color: #36a8ff;" text="Add To Lost Books" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="108.0" fitWidth="1100.0" layoutY="41.0">
+         <image>
+            <Image url="@../resources/toplogo2.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

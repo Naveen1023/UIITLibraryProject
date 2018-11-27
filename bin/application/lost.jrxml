@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lost" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad25c019-f8cf-46b3-865e-46c756929f36">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Oracle Conn"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="c6c52a0d-3036-4d6b-a477-9426280c38fb">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Oracle Conn"/>
+		<queryString language="SQL">
+			<![CDATA[select * from lost
+]]>
+		</queryString>
+		<field name="ACC_NO" class="java.math.BigDecimal">
+			<property name="com.jaspersoft.studio.field.label" value="ACC_NO"/>
+		</field>
+		<field name="BOOK_NAME" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="BOOK_NAME"/>
+		</field>
+		<field name="AUTHOR" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.label" value="AUTHOR"/>
+		</field>
+		<group name="ACC_NO">
+			<groupExpression><![CDATA[$F{ACC_NO}]]></groupExpression>
+		</group>
+		<group name="BOOK_NAME">
+			<groupExpression><![CDATA[$F{BOOK_NAME}]]></groupExpression>
+		</group>
+		<group name="AUTHOR">
+			<groupExpression><![CDATA[$F{AUTHOR}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from lost]]>
+	</queryString>
+	<field name="ACC_NO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ACC_NO"/>
+	</field>
+	<field name="BOOK_NAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="BOOK_NAME"/>
+	</field>
+	<field name="AUTHOR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="AUTHOR"/>
+	</field>
+	<group name="ACC_NO">
+		<groupExpression><![CDATA[$F{ACC_NO}]]></groupExpression>
+	</group>
+	<group name="BOOK_NAME">
+		<groupExpression><![CDATA[$F{BOOK_NAME}]]></groupExpression>
+	</group>
+	<group name="AUTHOR">
+		<groupExpression><![CDATA[$F{AUTHOR}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="257" splitType="Stretch">
+			<componentElement>
+				<reportElement x="-20" y="20" width="595" height="237" uuid="1bb6c246-d67e-4650-9b7a-a5797a0cb37e">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="f94900a5-930a-4809-b7ae-beed45219856">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="70" uuid="8601b736-e8b3-468c-876c-b5ed70835182">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="54b7d51d-eca3-4813-9cce-44c073bc1fbf"/>
+								<text><![CDATA[ACC_NO]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="da138351-8de8-47f7-94c8-d08dd287f40b"/>
+								<textFieldExpression><![CDATA[$F{ACC_NO}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="250" uuid="0604ac52-c751-4407-8ebf-95e08abd2e91">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="250" height="30" uuid="1c94e302-a9ba-4864-803c-42a09034d882"/>
+								<text><![CDATA[BOOK_NAME]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="250" height="30" uuid="68cf6e84-5016-4880-af37-16ab0d85d991"/>
+								<textFieldExpression><![CDATA[$F{BOOK_NAME}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="268" uuid="c6734d19-a4c0-448d-89e2-55fd68da4efa">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableFooter style="Table_TH" height="30"/>
+						<jr:columnHeader style="Table_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="268" height="30" uuid="01c3ff54-c3d2-4d79-9228-2e6e48f08ca9"/>
+								<text><![CDATA[AUTHOR]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="268" height="30" uuid="efc5e6a3-c591-4b49-899d-f050762e5f0a"/>
+								<textFieldExpression><![CDATA[$F{AUTHOR}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField>
+				<reportElement x="190" y="-10" width="140" height="30" uuid="b1987d35-88d0-4b6d-af7d-33145dcb126c"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Lost Books"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

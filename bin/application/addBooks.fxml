@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="616.0" style="-fx-background-color: #d3d3d3 #407252;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddNewBookController">
+   <children>
+      <Label layoutX="31.0" layoutY="66.0" prefHeight="17.0" prefWidth="170.0" text="Accession Number">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="123.0" prefHeight="27.0" prefWidth="129.0" text="Book Name">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="188.0" prefHeight="27.0" prefWidth="91.0" text="Author">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="14.0" prefHeight="35.0" prefWidth="318.0" text="Add  Deatils Of New Books" textFill="#588048">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="accno" layoutX="244.0" layoutY="62.0" prefHeight="27.0" prefWidth="300.0">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="bookname" layoutX="244.0" layoutY="119.0" prefHeight="27.0" prefWidth="300.0">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="author" layoutX="244.0" layoutY="184.0" prefHeight="27.0" prefWidth="300.0">
+         <font>
+            <Font size="14.0" />
+         </font></JFXTextField>
+      <JFXButton layoutX="101.0" layoutY="265.0" onAction="#addnewbook" prefHeight="27.0" prefWidth="143.0" style="-fx-background-color: #407252;" text="Add " textFill="#f2f2f2">
+         <font>
+            <Font name="Arial Narrow Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="added" layoutX="151.0" layoutY="304.0" prefHeight="27.0" prefWidth="170.0" text="Book Successfully Added" textFill="#570f3c">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="323.0" layoutY="265.0" minHeight="35.0" minWidth="143.0" onAction="#reset" style="-fx-background-color: #407252;" text="Reset" textFill="#f2f2f2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

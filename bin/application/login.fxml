@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ap" prefHeight="251.0" prefWidth="458.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.loginController"> 
+  <children> <Label layoutX="41.0" layoutY="86.0" prefHeight="16.0" prefWidth="77.0" text="USERNAME" textFill="#2bfc06"> <font> <Font name="Franklin Gothic Medium" size="14.0" /> </font> </Label> <Label layoutX="41.0" layoutY="126.0" text="PASSWORD" textFill="#2bfc06"> <font> <Font name="Franklin Gothic Medium" size="14.0" /> </font> 
+   </Label>
+      <TextField fx:id="userName" layoutX="136.0" layoutY="81.0" prefHeight="25.0" prefWidth="186.0" promptText="User name for the Database" />
+      <PasswordField fx:id="passWord" layoutX="137.0" layoutY="121.0" onKeyPressed="#pressingEnterInLoginForm" prefHeight="25.0" prefWidth="186.0" promptText="Password for the Database" />
+      <JFXButton fx:id="login" buttonType="RAISED" layoutX="166.0" layoutY="166.0" onAction="#logIn" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #00cc99;" text="Login">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="229.0" layoutY="241.0" onAction="#goToFineScene" prefHeight="25.0" prefWidth="226.0" text="Add/Update Fine Calculation" textFill="RED" underline="true">
+         <font>
+            <Font name="Georgia Bold Italic" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="41.0" layoutY="14.0" prefHeight="16.0" prefWidth="376.0" text="Enter Your Database's Following Details To Login" textFill="#0033ff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label> 
+   </children>
+</AnchorPane>

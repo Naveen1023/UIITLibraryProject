@@ -1,0 +1,9 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.tab{
+	-fx-pref-width: 363;
+	-fx-pref-height:60;
+	
+}
+.tab-header-background{
+	-fx-background-color:#333333;
+}
